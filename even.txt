@@ -1,0 +1,11 @@
+?- even_fact(4). % returns true
+?- even_rule(4). % returns true
+
+?- even_fact(10). % returns false
+?- even_rule(10). % returns true
+
+?- even_fact(-2). % returns false
+?- even_rule(-2). % returns true
+
+?- even_fact(5). % returns false
+?- even_rule(5). % returns false
