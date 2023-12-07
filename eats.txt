@@ -1,0 +1,9 @@
+?- eats(pac-man, cherry). % returns true
+?- eats(pac-man, strawberry). % returns true
+?- eats(pac-man, haggis). % returns false
+?- eats(pac-man, strudel). % returns false
+
+?- eats(pac-man, cherry), eats(pac-man, strawberry). % returns true
+?- eats(pac-man, cherry), eats(pac-man, strudel). % returns false
+?- eats(pac-man, haggis), eats(pac-man, strawberry). % returns false
+?- eats(pac-man, haggis), eats(pac-man, strudel). % returns false
