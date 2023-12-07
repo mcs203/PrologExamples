@@ -1,0 +1,16 @@
+?- color(max, blue). % returns true
+?- color(max, red). % returns true
+?- color(max, yellow). % returns false
+?- color(max, green). % returns false
+
+?- color(max, blue); color(max, red). % returns true
+?- color(max, blue); color(max, green). % returns true
+?- color(max, yellow); color(max, red). % returns true
+?- color(max, yellow); color(max, green). % returns false
+
+% exclusive or
+?- (color(max, blue); color(max, red)), not((color(max, blue), color(max, red))). % returns false
+?- (color(max, blue); color(max, green)), not((color(max, blue), color(max, green))). % returns true
+?- (color(max, yellow); color(max, red)), not((color(max, yellow), color(max, red))). % returns true
+?- (color(max, yellow); color(max, green)), not((color(max, yellow), color(max, green))). % returns false
+
